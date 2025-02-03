@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedriverse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+      
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0e1624;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(26, 35, 50, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(26, 35, 50, 1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #f1c40f; } 
+    15% { color: #168405; } 
+    25% { color: #e74c3c; } 
+    35% { color: #CE18AA; } 
+    50% { color: #3498db; } 
+    65% { color: #8e44ad; } 
+    75% { color: #2ecc71; } 
+    85% { color: #e67e22; } 
+    100% { color: #f39c12; } 
+}
+
+.login-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00d4ff; 
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.login-button:hover {
+    background: #00ffff; 
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+    text-align: center;
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.text-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #00FFFF, #ff0080);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #e60073, #00ffff);
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(255, 0, 128, 0.3);
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #090979, #00d4ff);
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.image-content img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-content {
+        margin-bottom: 30px;
+    }
+
+    .image-content img {
+        max-width: 100%;
+    }
+}
+
+
+.footer {
+    background-color: #1a2332;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #2c3e50;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+	color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+	color: white;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff0080;
+}
+
+
+.contact-button {
+    background: #00d4ff; 
+    color: #fff;
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+	box-shadow: 0px 4px 15px rgba(0, 212, 255, 0.4);}
+
+.contact-button:hover {
+    background: #00ffff; 
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+.services-button {
+    background:#00d4ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+ box-shadow: 0px 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.services-button:hover {
+    background: #00ffff; 
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+.privacy-button {
+	background: #00d4ff; 
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+.privacy-button:hover {
+ background: #00ffff; 
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-3px);}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff0080;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer; 
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #ff8c00;
+}
+
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+		
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Cedriverse</h1>
+        <a href="loginpage.html" class="login-button">Login</a>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="text-content">
+                <h1>"Cyber: Future Starts Here."</h1>
+                <a href="started.html" class="cta-button">Get Started</a>
+            </div>
+            <div class="image-content">
+				<img src="image/menu.webp" alt="Cyber Circuit Image">           
+			</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cedriverse. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/bilalerd1/related_profiles/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/bilalx6716" aria-label="X (Twitter)" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://www.linkedin.com/in/bilal-erdo%C4%9Fan-919659325/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="button-container" style="margin-top: 15px;">
+            <a href="contact.html" class="contact-button">Contact Us</a>
+            <a href="services.html" class="services-button">Services</a>
+            <a href="privacy-policy.html" class="privacy-button">Privacy Policy</a>
+        </div>
+    </footer>
+
+
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</body>
+</html>

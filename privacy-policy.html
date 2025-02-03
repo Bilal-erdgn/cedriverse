@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy and Terms of Use</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0e1624;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        /* Header styles */
+        .header {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(26, 35, 50, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
+        }
+
+        .header.scrolled {
+            background-color: rgba(26, 35, 50, 1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: colorChange 5s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #f1c40f; } 
+            15% { color: #168405; } 
+            25% { color: #e74c3c; } 
+            35% { color: #CE18AA; } 
+            50% { color: #3498db; } 
+            65% { color: #8e44ad; } 
+            75% { color: #2ecc71; } 
+            85% { color: #e67e22; } 
+            100% { color: #f39c12; } 
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .main-content {
+            margin-top: 50px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(26, 35, 50, 0.8);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #1a2332;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #2c3e50;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: #ff0080;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+		.footer .back-to-menu {
+    		 background: ##00FFB3; /* Teal color */
+            color: #fff;
+			margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 15px rgba(23, 162, 184, 0.3);/* Smooth transition for hover effect */
+}
+
+	.footer .back-to-menu:hover {
+     background: ##00FFFF; /* Darker teal for hover effect */
+            box-shadow: 0px 6px 20px rgba(234, 112, 134, 0.5);
+            transform: translateY(-3px);
+
+}
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff0080;
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Cedriverse</h1>
+    </header>
+
+    <div class="container">
+        <!-- Privacy Policy Section -->
+        <div class="main-content">
+            <div class="section">
+                <h2>Privacy Policy</h2>
+                <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.</p>
+                <p>1. <strong>Information We Collect:</strong> We collect information you provide directly to us, such as your name and email address, and information about your use of our website.</p>
+                <p>2. <strong>How We Use Your Information:</strong> We use your information to provide and improve our services, communicate with you, and ensure the security of our site.</p>
+                <p>3. <strong>Data Protection:</strong> We implement a variety of security measures to maintain the safety of your personal information. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                <p>4. <strong>Third-Party Services:</strong> We may use third-party services to help us analyze and improve our website. These services may have their own privacy policies, and we encourage you to review them.</p>
+                <p>5. <strong>Changes to This Policy:</strong> We may update our Privacy Policy from time to time. Any changes will be posted on this page.</p>
+                <p>If you have any questions or concerns about our Privacy Policy, please contact us.</p>
+            </div>
+
+            <!-- Terms of Use Section -->
+            <div class="section">
+                <h2>Terms of Use</h2>
+                <p>Welcome to Cedriverse. By using our website, you agree to comply with and be bound by the following terms and conditions:</p>
+                <p>1. <strong>Acceptance of Terms:</strong> By accessing and using our website, you accept and agree to be bound by these Terms of Use.</p>
+                <p>2. <strong>Content Ownership:</strong> All content on this site is the property of Cedriverse or its licensors and is protected by copyright laws.</p>
+                <p>3. <strong>Prohibited Activities:</strong> You may not use the website for any unlawful purpose or in a manner that could damage, disable, overburden, or impair the website.</p>
+                <p>4. <strong>Disclaimer of Warranties:</strong> The site is provided "as is" and "as available" without warranties of any kind, either express or implied.</p>
+                <p>5. <strong>Limitation of Liability:</strong> Cedriverse will not be liable for any indirect, incidental, or consequential damages arising from the use of the website.</p>
+                <p>6. <strong>Changes to Terms:</strong> We reserve the right to change these Terms of Use at any time. Continued use of the website constitutes acceptance of any changes.</p>
+                <p>If you have any questions about these Terms of Use, please contact us.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Cedriverse. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/bilalerd1/related_profiles/" aria-label="Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/bilalx6716" aria-label="X (Twitter)" target="_blank">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/bilal-erdo%C4%9Fan-919659325/" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+              </div>
+		<a href="cedriverse.html" class="back-to-menu">Back to Menu</a>
+    </footer>
+   
+    
+</body>
+</html>
+

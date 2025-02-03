@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cyber-Themed Document</title>
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #2E2E2E; /* A more balanced mid-tone gray background */
+    font-family: sans-serif;
+}
+
+.conteiner {
+    width: 1300px;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.conteiner .box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    background: #333333; /* Slightly lighter gray for the boxes to contrast with the background */
+    border: 2px solid #00FFB3;
+    border-radius: 10px; /* Rounded corners for boxes */
+    overflow: hidden; /* Ensures rounded corners are respected */
+}
+
+.conteiner .box .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner .box .imgBox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image fits within the box */
+    transition: transform 2s;
+}
+
+.conteiner .box:hover .imgBox img {
+    transform: scale(1.2);
+}
+
+.conteiner .box .detay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.conteiner .box:hover .detay {
+    transform: scaleY(1);
+}
+
+.conteiner .box .detay .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 15px;
+    color: #FFFFFF; /* White text color */
+    display: flex; /* Aligns content in a flexible row layout */
+    flex-wrap: wrap; /* Allows content to wrap to the next line if it exceeds the box */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    gap: 10px; /* Adds space between items */
+}
+
+.conteiner .box .detay .content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #00FFB3; /* Neon green title color */
+    word-wrap: break-word; /* Breaks long words to fit */
+    overflow-wrap: break-word; /* Wraps text if it exceeds the box boundaries */
+    overflow-y: auto; 
+    flex: 0 1 auto; 
+}
+
+.conteiner .box .detay .content p {
+    margin: 12px 0 0;
+    padding: 0;
+    font-size: 10px;
+    color: #00FFFF; /* Neon blue paragraph color */
+    word-wrap: break-word; /* Breaks long words to fit */
+    overflow-wrap: break-word; /* Wraps text if it exceeds the box boundaries */
+    overflow-y: auto; /* Adds a scrollbar if the height is exceeded */
+    flex: 0 1 auto; 
+}
+
+.footer {
+    background: #333333; /* Dark background for footer */
+    color: #FFFFFF; /* White text color */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff0080;
+        }
+
+
+	.footer .back-to-menu {
+   		    background: ##00FFB3; /* Teal color */
+            color: #fff;
+		    margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 15px rgba(23, 162, 184, 0.3);/* Smooth transition for hover effect */
+}
+
+	.footer .back-to-menu:hover {
+     background: ##00FFFF; /* Darker teal for hover effect */
+            box-shadow: 0px 6px 20px rgba(234, 112, 134, 0.5);
+            transform: translateY(-3px);
+
+}
+</style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/cybersecurity-overview.jpg" alt="Cybersecurity Overview"  width="308" height="302" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>The Cybersecurity Landscape</h2>
+                    <p>Cybersecurity involves measures and practices designed to protect networks, devices, and data from unauthorized access or attacks. Ensuring data integrity and privacy is crucial in the digital era.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/Cyber Threats and Vulnerabilities.jpg" alt="Cyber Threats"  width="308" height="302"  />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Cyber Threats and Vulnerabilities</h2>
+                    <p>Understanding the different types of cyber threats and vulnerabilities is essential for securing systems. Identifying risks like malware and phishing helps in applying effective security measures.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/Cyber Threats.jpg" alt="Advanced Threat Protection"  width="308" height="302"  />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Advanced Threat Protection</h2>
+                    <p>Advanced Threat Protection (ATP) encompasses tools and protocols designed to prevent, detect, and respond to sophisticated cyber threats using machine learning and artificial intelligence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/klock.jpg" alt="Cybersecurity Best Practices"   width="308" height="302" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Cybersecurity Best Practices</h2>
+                    <p>Implementing best practices such as regular updates, strong passwords, and employee training can significantly reduce cyber risk and help build a robust defense against potential attacks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/DALL·E 2024-08-28 01.49.20 - A futuristic scene focusing on cyber hygiene. The image shows a digital workspace with a sleek, modern design, featuring a large holographic screen di.webp" alt="Cyber Hygiene" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Cyber Hygiene</h2>
+                    <p>Cyber hygiene involves practices to maintain system health and safeguard against threats, including regular updates, using security tools, and being cautious of suspicious activities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/DALL·E 2024-08-28 00.59.55 - A sleek and sophisticated logo for a technology website called 'Cedriverse,' focusing on cyber and cyber-related fields, but without the site name app.webp" alt="Incident Response and Management" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Incident Response and Management</h2>
+                    <p>Effective incident response involves quickly detecting, analyzing, and responding to cyber incidents. A well-defined plan helps minimize damage and enables rapid recovery from attacks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/i.webp" alt="Data Encryption"  width="300" height="295" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Data Encryption</h2>
+                    <p>Data encryption encodes information to prevent unauthorized access, ensuring that even if intercepted, the data remains confidential and secure from malicious entities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="resim/DALL·E 2024-08-28 01.46.44 - A futuristic scene depicting a cyber security theme. The image features a sleek and modern digital cityscape with glowing blue and green neon lights. .webp" alt="Future of Cybersecurity" />
+            </div>
+            <div class="detay">
+                <div class="content">
+                    <h2>Future of Cybersecurity</h2>
+                    <p>The future of cybersecurity will likely see increased automation, advanced threat detection, and enhanced collaborative efforts. Staying ahead of evolving threats with innovative technologies will be crucial for digital security.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Cedriverse. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/bilalerd1/related_profiles/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/bilalx6716" aria-label="X (Twitter)" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://www.linkedin.com/in/bilal-erdo%C4%9Fan-919659325/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <a href="cedriverse.html" class="back-to-menu">Back to Menu</a>
+    </footer>
+</body>
+</html>
